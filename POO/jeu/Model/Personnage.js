@@ -18,12 +18,21 @@ export class Personnage {
   }
   perteVie(nombre) {
     this.#pointsDeVie -= nombre;
-    this.#force -= 5;
+    this.#force -= 10;
   }
   getPointsDeVie() {
     return this.#pointsDeVie;
   }
   getForce() {
     return this.#force;
+  }
+  getName() {
+    return this.#nom;
+  }
+  toString() {
+    return `Nom: ${this.#nom}
+    Force : ${this.#force}
+    Points de vies : ${this.#pointsDeVie}
+    Catégorie : ${this.#categorie}`;
   }
 }
